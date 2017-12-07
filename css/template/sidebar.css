@@ -72,7 +72,17 @@
 	}
 }
 @media (max-width:422px) and (min-width: 381px) { #sidebarHome{display: block; }}
-@media (max-width:349px){ #sidebarHome{display: block; }}
-@media (max-width:311px){ #sidebarCalendar{display: block; }}
-@media (max-width:274px){ #sidebarNotif{display: block; }}
-@media (max-width:236px){ #sidebarMessages{display: block;}}
+@media (max-width:360px){
+	 #sidebarHome, #sidebarCalendar, #sidebarNotif, #sidebarMessages
+	 {
+		 display: block;
+	 }
+	 #homeIcon, #calendarIcon, #notifIcon, #messageIcon
+	 {
+		 display: none;
+	 }
+	 #title
+	 {
+		 width: 170px;
+	 }
+ }
