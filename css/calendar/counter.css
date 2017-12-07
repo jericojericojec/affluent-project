@@ -1,0 +1,62 @@
+#counterDiv
+{
+  background-color: white;
+  width: 20vw;
+  float: right;
+  margin-right: 5vw;
+	height: auto;
+  border: 1px solid black;
+  margin-top: -40vw;
+  min-width: 100px;
+}
+#counterHeader
+{
+  background-color: #262626;
+  color: white;
+  font-family: "Century Gothic";
+  width: 100%;
+  height: auto;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 0px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+.legends li pre
+{
+  width: 20px;
+  height: 20px;
+  color: white;
+  font-family: "Century Gothic";
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 8px;
+  padding: 2px;
+  border-radius: 50px;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.legends li
+{
+  list-style-type: none;
+  text-align: center;
+}
+@media (max-width:500px) {
+  .calendarBody
+  {
+    width:90vw;
+  	max-width:90%;
+  }
+  #counterDiv
+  {
+    float: none;
+    display: block;
+    margin-top: 20px;
+    width: 50vw;
+  }
+  #counterDivCenter
+  {
+    padding: 0px 25vw;
+  }
+}
