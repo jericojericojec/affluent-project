@@ -1,0 +1,78 @@
+#icon
+{
+	width:30px;
+	height:30px;
+	margin-top: 5px;
+	margin-left: 1%;
+	position: relative;
+	cursor: pointer;
+}
+#sidebar
+{
+	display: block;
+	width: 20%;
+	height:auto;
+	float:left;
+	background-color:#f1f1f1;
+	top: 42px;
+	position: fixed;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+	left:-20%;
+	min-width: 180px;
+}
+#companyIcon
+{
+	width: 90%;
+	background-color: #4c4c4c;
+	margin: 5% 0px 5% 5%;
+}
+.sidebarButton
+{
+	font-size:20px;
+	font-family: "Segoe UI";
+	text-align: center;
+	color: white;
+	width: 100%;
+	text-decoration: none;
+	display: block;
+	padding: 3% 0px;
+	overflow: hidden;
+	background-color: #555;
+}
+.sidebarButton:hover{ background-color: white; color: black; }
+
+#sidebarHome, #sidebarCalendar, #sidebarNotif, #sidebarMessages{ display: none; }
+
+.sidebarImg
+{
+	height:30px;
+	width: 30px;
+}
+.sidebarButton:hover img
+{
+	filter: brightness(0);
+}
+@media (max-width:901px){#sidebar{ left: -180px; }}
+@media (max-width:380px) {
+	#sidebar
+	{
+		width: 50%;
+		left: -50%;
+		min-width: 10px;
+	}
+	.sidebarButton
+	{
+		font-size:14px;
+	}
+	#homeIcon, #notifIcon, #messageIcon, #accountIcon, #calendarIcon
+	{
+		top: 3px;
+		width:20px;
+		height:20px;
+	}
+}
+@media (max-width:422px) and (min-width: 381px) { #sidebarHome{display: block; }}
+@media (max-width:349px){ #sidebarHome{display: block; }}
+@media (max-width:311px){ #sidebarCalendar{display: block; }}
+@media (max-width:274px){ #sidebarNotif{display: block; }}
+@media (max-width:236px){ #sidebarMessages{display: block;}}
