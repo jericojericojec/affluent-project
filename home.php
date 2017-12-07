@@ -30,7 +30,7 @@
 	</div>
 	<div id="titlebar">
 		<img src="img\template\menuIcon.png" id="icon"/>
-		<span id="title">DAILY TASK MANAGEMENT</span>
+		<span id="title">DAILY TASK MANAGEMENTsssss</span>
 		<a id="myProfileIcon" onClick="manageMyProfileBar()" class="menuButton" style="cursor: pointer;"><img src="img\template\accountIcon.png" id="accountIcon"/></a>
 		<a href="" class="menuButton"><img src="img\template\messageIcon.png" id="messageIcon"/></a>
 		<a href="" class="menuButton"><img src="img\template\notifIcon.png" id="notifIcon"/></a>
