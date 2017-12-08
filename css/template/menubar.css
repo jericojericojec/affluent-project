@@ -7,6 +7,15 @@
 	vertical-align: middle;
 	position: fixed;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+	animation: 1s ease-out 0s 1 slideInFromTop;
+}
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 #title
 {
@@ -72,6 +81,16 @@
  	min-width: 135px;
 	cursor: pointer;
 	top: -102;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+	animation: 1s ease-out 0s 1 slideMyProfileFromTop;
+}
+@keyframes slideMyProfileFromTop {
+0% {
+	transform: translateY(-100%);
+}
+100% {
+	transform: translateY(-102);
+}
 }
 
 @media (max-width:380px) {
