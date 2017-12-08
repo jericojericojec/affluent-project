@@ -1,0 +1,41 @@
+.background{
+    background: url(../../img/login/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size:cover;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.form-container h2{
+    text-align: center;
+}
+
+.thumbnail{
+    border:none !important;
+    background: transparent !important;
+    box-shadow:none !important;
+}
+
+.form-container{
+    padding: 50px 60px;
+    margin-top: 10vh;
+    background: rgba(0,0,0,0.40);
+    color: #fff;
+    border-radius: 0%;
+    margin-bottom: 10vh;
+}
+
+.form-container h2{
+    text-align: center;
+    font-size: 3.2vw;
+}
+
+.show-password{
+    text-align: left;
+}
