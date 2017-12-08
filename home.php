@@ -32,26 +32,31 @@
 		<a class="sidebarButton" onclick="logout()">Logout</a>
 	</div>
 	<div id="sidebar">
-    <a href="" id="sidebarHome" class="sidebarButton"><img src="img\template\homeIcon.png" class="sidebarImg"/><br/>Home</a>
-    <a href="" id="sidebarCalendar" class="sidebarButton" ><img src="img\template\calendarIcon.png" class="sidebarImg"/><br/>Calendar</a>
-    <a href="" id="sidebarNotif" class="sidebarButton" ><img src="img\template\notifIcon.png" class="sidebarImg"/><br/>Notifications</a>
-    <a href="" id="sidebarMessages" class="sidebarButton"><img src="img\template\messageIcon.png" class="sidebarImg"/><br/>Messages</a>
-		<a href="" class="sidebarButton"><img src="img\template\officeIcon.png" class="sidebarImg"/><br/>Office</a>
-		<a href="" class="sidebarButton"><img src="img\template\teamIcon.png" class="sidebarImg"/><br/>Team</a>
+    <a href="home.php" id="sidebarHome" class="sidebarButton"><img src="img\template\homeIcon.png" class="sidebarImg"/><br/>Home</a>
+    <a href="calendar.php" id="sidebarCalendar" class="sidebarButton" ><img src="img\template\calendarIcon.png" class="sidebarImg"/><br/>Calendar</a>
+    <a href="notifications.php" id="sidebarNotif" class="sidebarButton" ><img src="img\template\notifIcon.png" class="sidebarImg"/><br/>Notifications</a>
+    <a href="messages.php" id="sidebarMessages" class="sidebarButton"><img src="img\template\messageIcon.png" class="sidebarImg"/><br/>Messages</a>
+		<a href="groups.php?group=office" class="sidebarButton"><img src="img\template\officeIcon.png" class="sidebarImg"/><br/>Office</a>
+		<a href="groups.php?group=team" class="sidebarButton"><img src="img\template\teamIcon.png" class="sidebarImg"/><br/>Team</a>
 		</div>
   	<div id="titlebar">
   		<img src="img\template\menuIcon.png" id="icon"/>
     	<a href="http://www.affluentproperties.ph/" target="_blank"><img src="img\template\company.png" id="companyIcon"/></a>
   		<span id="title">Daily Task Management</span>
   		<a id="myProfileIcon" onClick="manageMyProfileBar()" class="menuButton" style="cursor: pointer;"><img src="img\template\accountIcon.png" id="accountIcon"/></a>
-  		<a href="" class="menuButton"><img src="img\template\messageIcon.png" id="messageIcon"/></a>
-  		<a href="" class="menuButton"><img src="img\template\notifIcon.png" id="notifIcon"/></a>
+  		<a href="messages.php" class="menuButton"><img src="img\template\messageIcon.png" id="messageIcon"/></a>
+  		<a href="notifications.php" class="menuButton"><img src="img\template\notifIcon.png" id="notifIcon"/></a>
   		<a href="calendar.php" class="menuButton"><img src="img\template\calendarIcon.png" id="calendarIcon"/></a>
-  		<a href="" class="menuButton"><img src="img\template\homeIcon.png" id="homeIcon"/></a>
+  		<a href="home.php" class="menuButton"><img src="img\template\homeIcon.png" id="homeIcon"/></a>
   	</div>
-	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	<div id="content">
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+  </div>
 <footer>
 	<span>©Copyright 2017, Affluent Properties: Daily Task Management by STI College Global City-Interns</span>
 </footer>
+<div id="preloader">
+  <img src="img\template\cityscapes.gif" id="preloaderImg"/>
+</div>
 </body>
 </html>
