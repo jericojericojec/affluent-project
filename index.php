@@ -31,7 +31,7 @@ function startSess()
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
   <!-- css styles -->
-  <link href="css/login/styles.css" rel="stylesheet">
+  <link href="css/login/styles.css" type="text/css" rel="stylesheet">
   <!-- scripts -->
   
   <title>Affluent Properties Leasing and Sales - Task Management System</title>
@@ -39,66 +39,80 @@ function startSess()
 </head>
 <body class="background">
   <!-- bootstrap container & row for responsive layout -->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 col-sm-4 col-xs-12"></div>
-      <div class="col-md-4 col-sm-4 col-xs-12">
-      <!-- login form -->
-        <form class="form-container" action="<?php $_SERVER["PHP_SELF"]?>" id="form" method="post" name="form">
-          <!-- company logo -->
-          <img src="img/login/company.png" class="img-thumbnail thumbnail" alt="Affluent">
-          <?php
-            if(isset($_POST["loginSubmitted"]))
-            {
-              if(!empty($_POST["username"]) && !empty($_POST["password"]))
-              {
-                $username = $_POST["username"];
-                $password = $_POST["password"];
-                $serverName = "localhost";
-                $sqlUsername = "root";
-                $sqlPassword = "";
-                $database = "dbTask";
-                $conn = mysqli_connect($serverName,$sqlUsername,$sqlPassword,$database);
-                if($conn->connect_error)
+  <div class="modal-dialog">
+    <div class="modal-content form-container">
+      <div class="modal-header">
+        <!-- company logo -->
+        <img src="img/login/company.png" class="img-thumbnail thumbnail" alt="Affluent">
+      </div>
+        <div class="modal-body">
+          <!-- login form -->
+            <form class="col-md-12 center-block" action="<?php $_SERVER["PHP_SELF"]?>" id="form" method="post" name="form">
+              
+              <?php
+                if(isset($_POST["loginSubmitted"]))
                 {
-                  die("Connection failed: " . $conn->connect_error);
-                }
-                else
-                {
-                  $sql = "SELECT password from tbl_user WHERE username = '" . $username ."' AND password = '" . $password . "'";
-                  $result = mysqli_query($conn,$sql);
-                  if (mysqli_num_rows($result) > 0)
+                  if(!empty($_POST["username"]) && !empty($_POST["password"]))
                   {
-                    echo "<script>alert('startSess');</script>";
-                    startSess();
+                    $username = $_POST["username"];
+                    $password = $_POST["password"];
+                    $serverName = "localhost";
+                    $sqlUsername = "root";
+                    $sqlPassword = "";
+                    $database = "dbTask";
+                    $conn = mysqli_connect($serverName,$sqlUsername,$sqlPassword,$database);
+                    if($conn->connect_error)
+                    {
+                      die("Connection failed: " . $conn->connect_error);
+                    }
+                    else
+                    {
+                      $sql = "SELECT password from tbl_user WHERE username = '" . $username ."' AND password = '" . $password . "'";
+                      $result = mysqli_query($conn,$sql);
+                      if (mysqli_num_rows($result) > 0)
+                      {
+                        echo "<script>alert('startSess');</script>";
+                        startSess();
+                      }
+                      else
+                      {
+                          echo "Invalid login request";
+                      }
+                      mysqli_close($conn);
+                    }
                   }
-                  else
-                  {
-                      echo "Invalid login request";
-                  }
-                  mysqli_close($conn);
                 }
-              }
-            }
-          ?>
-          <h2>Task Management System</h2>
+              ?>
+              <div class="form-group">
+                <div class="col-md-12 center">
+                  <h4>Task Management System</h4>
+                </div>
+                <input type="text" class="form-control input-lg" id="username" placeholder="Username">
+              </div>
 
-          <div class="form-group">
-            <label>Username: </label>
-            <input type="text" class="form-control" id="username" placeholder="Username">
+              <div class="form-group">
+                <input type="password" class="form-control input lg" id="password" placeholder="Password">
+              </div>
+
+              <div class="form-check" class="style: float:left;">
+                <div class="col-md-12">
+                  <input type="checkbox" name="remember_me" id="remember_me"> Remember Me
+                </div
+              </div>
+
+              <div class="form-group">
+                <input class="btn btn-success btn-block" type="submit" name="loginSubmitted" id="submit" value="LOGIN">
+              </div>
+            </form>
+
+        <div class="modal-footer">
+          <div class="col-md-12">
+            <p class="text-center">Copyright © 2017</p>
+            <p class="text-center">STI Global City - Interns</p>
           </div>
-          
-          <div class="form-group">
-              <label>Password</label>
-              <input type="password" class="form-control" id="password" placeholder="Password">
-          </div>
-
-          <input class="btn btn-success btn-block" type="submit" name="loginSubmitted" id="submit" value="LOGIN"/>
-        </form>
-
         </div>
-        <!-- <p>Gawa ng database na dbTask; table na tbl_user: column lang muna is username and password.</p> -->
+      </div>
     </div>
-  </div>
-</body>
+    <!-- <p>Gawa ng database na dbTask; table na tbl_user: column lang muna is username and password.</p> -->
+  </body>
 </html>
