@@ -1,0 +1,29 @@
+.background{
+    background: url(../../img/login/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size:cover;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.center{
+    text-align: center;
+}
+
+.thumbnail{
+    border:none !important;
+    background: transparent !important;
+    box-shadow:none !important;
+}
+
+.form-container{
+    margin-top: 10vh;
+    border-radius: 1%;
+    margin-bottom: 10vh;
+}
