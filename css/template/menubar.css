@@ -6,9 +6,8 @@
 	overflow: hidden;
 	vertical-align: middle;
 	position: fixed;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 	animation: 1s ease-out 0s 1 slideInFromTop;
-	z-index: 998;
+    z-index: 50;
 }
 @keyframes slideInFromTop {
   from { transform: translateY(-100%); }
@@ -17,16 +16,15 @@
 #title
 {
 	text-align: left;
-  font-weight: bold;
+    font-weight: bold;
 	color: white;
 	margin-left: 5px;
 	position: relative;
-  display: inline-block;
+    display: inline-block;
 	bottom: 15px;
 	vertical-align:middle;
-	font: 400 100px/1.5 'Pacifico', Helvetica, sans-serif;
+	font: 600 100px/1.5 Helvetica, Calibri, sans-serif;
 	font-size:20px;
-  text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
 }
 #homeIcon, #notifIcon, #messageIcon, #accountIcon, #calendarIcon
 {
@@ -34,7 +32,7 @@
 	height:26px;
 	float:right;
 	position: relative;
-  display: inline-block;
+    display: inline-block;
 	padding:8px 8px;
 }
 #accountIcon
@@ -72,13 +70,14 @@
 	right: 0px;
 	width: 13vw;
 	height: auto;
-	background-color: #555;
+    background-color: #5d5d5d;
 	overflow: hidden;
  	min-width: 135px;
 	cursor: pointer;
 	top: -102;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
 	animation: 1s ease-out 0s 1 slideMyProfileFromTop;
+    z-index: 50;
+    font-size: 30px;
 }
 @keyframes slideMyProfileFromTop {
 	0% {transform: translateY(-100%);}
@@ -108,4 +107,8 @@
  {
 	 min-width: 115px;
  }
+}
+
+.pointer-cursor{
+	cursor: pointer;
 }
