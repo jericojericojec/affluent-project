@@ -13,10 +13,9 @@
 	width: 15%;
 	height:auto;
 	float:left;
-	background-color:#f1f1f1;
+    background-color: #5d5d5d;
 	top: 42px;
 	position: fixed;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
 	left:-15%;
 	min-width: 120px;
 }
@@ -30,13 +29,12 @@
 	display: block;
 	padding: 3% 0px;
 	overflow: hidden;
-	background-color: #fbfbfb;
+	background-color: #C1C1C1;
 	border-bottom: 1px solid white;
 
-	font: 400 100px/1.5 'Pacifico', Helvetica, sans-serif;
+	font: 400 100px/1.5 Helvetica, sans-serif;
 	font-size:20px;
 	font-weight: normal;
-  text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
 }
 
 .sidebarImg{ height:30px; width: 30px; filter: brightness(0); }
