@@ -4,7 +4,7 @@ function startSess()
 {
   session_start();
   $_SESSION['username'] = $_POST["username"];
-  header("Location:Calendar.php");
+  header("Location:home.php");
   exit();
 }
 
@@ -32,10 +32,12 @@ function startSess()
 
   <!-- css styles -->
   <link href="css/login/styles.css" type="text/css" rel="stylesheet">
+  <link rel="stylesheet" href="css\template\body.css"/>
   <!-- scripts -->
-  
+
   <title>Affluent Properties Leasing and Sales - Task Management System</title>
-  
+  <link rel="icon" href="img\template\company.ico">
+
 </head>
 <body class="background">
   <!-- bootstrap container & row for responsive layout -->
@@ -48,7 +50,7 @@ function startSess()
         <div class="modal-body">
           <!-- login form -->
             <form class="col-md-12 center-block" action="<?php $_SERVER["PHP_SELF"]?>" id="form" method="post" name="form">
-              
+
               <?php
                 if(isset($_POST["loginSubmitted"]))
                 {
@@ -114,5 +116,8 @@ function startSess()
       </div>
     </div>
     <!-- <p>Gawa ng database na dbTask; table na tbl_user: column lang muna is username and password.</p> -->
+    <div id="preloader">
+      <img src="img\template\cityscapes.gif" id="preloaderImg"/>
+    </div>
   </body>
 </html>

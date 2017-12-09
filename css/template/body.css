@@ -39,7 +39,7 @@ footer span
 	background-color: #FCFCED;
 	display: inline-block;
 	vertical-align: middle;
-	animation: 1s ease-out 0s 1 preloader;
+	animation: 3s ease-out 0s 1 preloader;
 	animation-fill-mode: forwards;
 	z-index: 999;
 }
@@ -57,9 +57,13 @@ footer span
   left: 0;
   right: 0;
   margin: auto;
+	min-width: 200px;
+}
+@media (max-width:360px) {
+	#preloaderImg{ width: 40vw;}
 }
 @keyframes preloader {
-	0% {opacity: 100}
+	0% {opacity: 100;}
 	100% {opacity: 0;!important visibility: hidden;}
 }
 /*
