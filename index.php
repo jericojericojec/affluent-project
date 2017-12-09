@@ -97,7 +97,7 @@ function startSess()
               <div class="form-check" class="style: float:left;">
                 <div class="col-md-12">
                   <input type="checkbox" name="remember_me" id="remember_me"> Remember Me
-                </div
+                </div>
               </div>
 
               <div class="form-group">
