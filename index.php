@@ -61,10 +61,11 @@ function startSess()
                     $serverName = "localhost";
                     $sqlUsername = "root";
                     $sqlPassword = "";
-                    $database = "dbTask";
+                    $database = "dbtask";
                     $conn = mysqli_connect($serverName,$sqlUsername,$sqlPassword,$database);
                     if($conn->connect_error)
                     {
+                      echo "<script>alert('failed');</script>";
                       die("Connection failed: " . $conn->connect_error);
                     }
                     else

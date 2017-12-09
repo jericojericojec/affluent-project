@@ -59,12 +59,14 @@ footer span
   margin: auto;
 	min-width: 200px;
 }
-@media (max-width:360px) {
-	#preloaderImg{ width: 40vw;}
-}
+
 @keyframes preloader {
 	0% {opacity: 100;}
 	100% {opacity: 0;!important visibility: hidden;}
+}
+
+@media (max-width:360px) {
+	#preloaderImg{ width: 40vw; }
 }
 /*
 @keyframes preloader {

@@ -1,3 +1,9 @@
+#content
+{
+	position: relative;
+	top: 48px;
+	z-index: 9;
+}
 .calendarBody
 {
 	min-width: 201px;

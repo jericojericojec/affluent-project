@@ -8,6 +8,7 @@
 	position: fixed;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 	animation: 1s ease-out 0s 1 slideInFromTop;
+	z-index: 998;
 }
 @keyframes slideInFromTop {
   from { transform: translateY(-100%); }
