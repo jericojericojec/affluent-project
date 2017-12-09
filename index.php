@@ -107,7 +107,7 @@ function startSess()
 
         <div class="modal-footer">
           <div class="col-md-12">
-            <p class="text-center">Copyright © 2017</p>
+            <p class="text-center">Copyright &copy; 2017</p>
             <p class="text-center">STI Global City - Interns</p>
           </div>
         </div>
