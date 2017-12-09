@@ -20,10 +20,41 @@
     border:none !important;
     background: transparent !important;
     box-shadow:none !important;
+	height: 150px;
+	width: 300px;
+	margin: 0 auto;
 }
 
 .form-container{
     margin-top: 10vh;
     border-radius: 1%;
     margin-bottom: 10vh;
+}
+
+.basic-label{
+	font-size:15px;
+	font-family: 'Helvetica Neue', Calibri, Arial, sans-serif;
+}
+
+.lowkey-text{
+	color: #C1C1C1;
+	font-size: 13px;
+	margin-bottom: 0px;
+
+}
+
+.mouse-pointer{
+	cursor: pointer;
+}
+
+.gray-text{
+	color: #626262;
+}
+
+.mouse-default{
+	cursor: default;
+}
+
+.form-check{
+	padding-left: 5px;
 }
