@@ -4,7 +4,7 @@ function startSess()
 {
   session_start();
   $_SESSION['username'] = $_POST["username"];
-  header("Location:home.php");
+  header("Location:Calendar.php");
   exit();
 }
 
@@ -32,25 +32,23 @@ function startSess()
 
   <!-- css styles -->
   <link href="css/login/styles.css" type="text/css" rel="stylesheet">
-  <link rel="stylesheet" href="css\template\body.css"/>
   <!-- scripts -->
-
+  
   <title>Affluent Properties Leasing and Sales - Task Management System</title>
-  <link rel="icon" href="img\template\company.ico">
-
+  
 </head>
 <body class="background">
   <!-- bootstrap container & row for responsive layout -->
-  <div class="modal-dialog">
+  <div class="modal-dialog col-md-10">
     <div class="modal-content form-container">
       <div class="modal-header">
         <!-- company logo -->
-        <img src="img/login/company.png" class="img-thumbnail thumbnail" alt="Affluent">
+        <img src="img/login/company.png" class="img-thumbnail thumbnail" alt="Affluent" title="Affluent Properties Leasing and Sales">
       </div>
         <div class="modal-body">
           <!-- login form -->
             <form class="col-md-12 center-block" action="<?php $_SERVER["PHP_SELF"]?>" id="form" method="post" name="form">
-
+              
               <?php
                 if(isset($_POST["loginSubmitted"]))
                 {
@@ -61,11 +59,10 @@ function startSess()
                     $serverName = "localhost";
                     $sqlUsername = "root";
                     $sqlPassword = "";
-                    $database = "dbtask";
+                    $database = "dbTask";
                     $conn = mysqli_connect($serverName,$sqlUsername,$sqlPassword,$database);
                     if($conn->connect_error)
                     {
-                      echo "<script>alert('failed');</script>";
                       die("Connection failed: " . $conn->connect_error);
                     }
                     else
@@ -88,36 +85,32 @@ function startSess()
               ?>
               <div class="form-group">
                 <div class="col-md-12 center">
-                  <h4>Task Management System</h4>
+                  <p class="basic-label gray-text mouse-default">TASK MANAGEMENT SYSTEM</p>
                 </div>
-                <input type="text" class="form-control input-lg" id="username" placeholder="Username">
+                <input type="text" class="form-control input-lg" id="username" placeholder="Username" title="Username">
               </div>
 
               <div class="form-group">
-                <input type="password" class="form-control input lg" id="password" placeholder="Password">
+                <input type="password" class="form-control input lg" id="password" placeholder="Password" title="Password">
               </div>
 
               <div class="form-check" class="style: float:left;">
-                <div class="col-md-12">
-                  <input type="checkbox" name="remember_me" id="remember_me"> Remember Me
-                </div>
+				<input type="checkbox" name="remember_me" id="remember_me"> Remember me
               </div>
 
               <div class="form-group">
-                <input class="btn btn-success btn-block" type="submit" name="loginSubmitted" id="submit" value="LOGIN">
+                <input class="btn btn-success btn-block mouse-pointer" type="submit" name="loginSubmitted" id="submit" value="Sign in">
               </div>
             </form>
-
-        <div class="modal-footer">
-          <div class="col-md-12">
-            <p class="text-center">Copyright &copy; 2017</p>
-            <p class="text-center">STI Global City - Interns</p>
-          </div>
+      </div>
+	  <div class="modal-footer">
+		<div class="col-md-12">
+			<p class="text-center basic-label lowkey-text mouse-default" title="Developed by Alvin, JC, & Jerico">Copyright &copy; 2017 STI College Global City - Interns</p>
         </div>
       </div>
     </div>
     <!-- <p>Gawa ng database na dbTask; table na tbl_user: column lang muna is username and password.</p> -->
-    <div id="preloader">
+	<div id="preloader">
       <img src="img\template\cityscapes.gif" id="preloaderImg"/>
     </div>
   </body>
